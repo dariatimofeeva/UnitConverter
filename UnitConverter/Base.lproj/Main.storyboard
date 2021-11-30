@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIT CONVERTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnJ-Ym-h4u">
+                                <rect key="frame" x="56.666666666666657" y="89" width="262" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRD-uj-oeL">
+                                <rect key="frame" x="127.66666666666669" y="195" width="120" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="G8F-vO-ath"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LX-4z-wAw">
+                                <rect key="frame" x="127.66666666666669" y="360" width="120" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="62C-Ap-7SS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="дюймы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiB-zk-BF5">
+                                <rect key="frame" x="158.66666666666666" y="229" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сантиметры" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaJ-4M-hCI">
+                                <rect key="frame" x="138.66666666666666" y="394" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWO-Rt-aby">
+                                <rect key="frame" x="103.66666666666669" y="608" width="168" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="сбросить">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearConverterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGu-p7-JkL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.85656175709734061" green="0.85656175709734061" blue="0.85656175709734061" alpha="0.77663022477105759" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eiB-zk-BF5" firstAttribute="top" secondItem="gRD-uj-oeL" secondAttribute="bottom" id="4UM-4v-nX2"/>
+                            <constraint firstItem="qWO-Rt-aby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4rh-zf-GCN"/>
+                            <constraint firstItem="9LX-4z-wAw" firstAttribute="top" secondItem="eiB-zk-BF5" secondAttribute="bottom" constant="110" id="5Sv-fA-dpu"/>
+                            <constraint firstItem="gRD-uj-oeL" firstAttribute="top" secondItem="GnJ-Ym-h4u" secondAttribute="bottom" constant="70" id="92M-ac-qUS"/>
+                            <constraint firstItem="MaJ-4M-hCI" firstAttribute="top" secondItem="9LX-4z-wAw" secondAttribute="bottom" id="L0w-7c-xng"/>
+                            <constraint firstItem="gRD-uj-oeL" firstAttribute="top" secondItem="GnJ-Ym-h4u" secondAttribute="bottom" constant="70" id="OO8-9O-Gef"/>
+                            <constraint firstItem="eiB-zk-BF5" firstAttribute="width" secondItem="gRD-uj-oeL" secondAttribute="width" multiplier="0.483333" id="QQa-9e-md4"/>
+                            <constraint firstItem="eiB-zk-BF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SaR-24-vfo"/>
+                            <constraint firstItem="gRD-uj-oeL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X09-Hg-E9C"/>
+                            <constraint firstItem="MaJ-4M-hCI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZH3-QS-yfb"/>
+                            <constraint firstItem="GnJ-Ym-h4u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="fNL-Sh-mNb"/>
+                            <constraint firstItem="GnJ-Ym-h4u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fpM-Y3-52Q"/>
+                            <constraint firstItem="MaJ-4M-hCI" firstAttribute="centerX" secondItem="9LX-4z-wAw" secondAttribute="centerX" id="g9e-dH-Mzc"/>
+                            <constraint firstItem="qWO-Rt-aby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uT5-3n-yx1"/>
+                            <constraint firstItem="eiB-zk-BF5" firstAttribute="centerX" secondItem="gRD-uj-oeL" secondAttribute="centerX" id="vcN-Px-0A2"/>
+                            <constraint firstItem="9LX-4z-wAw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xEf-tg-4mf"/>
+                            <constraint firstItem="MaJ-4M-hCI" firstAttribute="width" secondItem="9LX-4z-wAw" secondAttribute="width" multiplier="0.816667" id="ywm-gg-W3G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qWO-Rt-aby" secondAttribute="bottom" constant="120" id="yyI-2H-OtB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cmTxt" destination="9LX-4z-wAw" id="aBU-DQ-hiS"/>
+                        <outlet property="inchesTxt" destination="gRD-uj-oeL" id="94r-9x-jpK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
